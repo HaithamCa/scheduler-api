@@ -5,7 +5,7 @@ INSERT INTO days (name)
 SELECT day FROM days;
 
 WITH times(time) AS (
-	VALUES ('12pm'), ('1pm'), ('2pm'), ('3pm'), ('4pm')
+	VALUES ('12pm'), ('1pm'), ('2pm'), ('3pm'), ('4pm'), ('5pm')
 )
 INSERT INTO appointments (time, day_id)
 SELECT time, id as day_id FROM days, times ORDER BY day_id, time;
