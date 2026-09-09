@@ -37,6 +37,14 @@ module.exports = function application(
   app.use(helmet());
   app.use(bodyparser.json());
 
+  app.get("/", (request, response) => {
+    response
+      .type("text")
+      .send(
+        "Interview Scheduler API is running.\nOpen the app at http://localhost:3000\nAPI: /api/days /api/appointments /api/interviewers"
+      );
+  });
+
   app.use("/api", days(db));
   app.use("/api", appointments(db, actions.updateAppointment));
   app.use("/api", interviewers(db));
