@@ -41,7 +41,7 @@ module.exports = function application(
     response
       .type("text")
       .send(
-        "Interview Scheduler API is running.\nOpen the app at http://localhost:3000\nAPI: /api/days /api/appointments /api/interviewers"
+        "Interview Scheduler API is running.\nAPI: /api/days /api/appointments /api/interviewers"
       );
   });
 
